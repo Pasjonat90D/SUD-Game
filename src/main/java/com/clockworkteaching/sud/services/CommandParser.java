@@ -1,6 +1,8 @@
 
 package com.clockworkteaching.sud.services;
 
+import com.clockworkteaching.sud.game.ClassicFightStrategy;
+import com.clockworkteaching.sud.game.FightStrategy;
 import com.clockworkteaching.sud.game.FightThread;
 import com.clockworkteaching.sud.model.Direction;
 import com.clockworkteaching.sud.model.NPC;
@@ -61,7 +63,9 @@ public class CommandParser {
     }
     private static void beginCombat(Player player, NPC targetNPC) {
        
-        FightThread ft = new FightThread(player, targetNPC);
+        FightStrategy fs = new ClassicFightStrategy();
+        
+        FightThread ft = new FightThread(player, targetNPC, fs );
         Thread t = new Thread(ft);
         t.start();
         
