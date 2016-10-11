@@ -20,8 +20,8 @@ public class Main {
 
         String namePlayer = scan.nextLine();
 
-        Player player = new Player(namePlayer, locationRepository.getStartLocation(), 100, 10);
-        System.out.println("Musisz iść na północ ");
+        Player player = new Player(namePlayer, locationRepository.getStartLocation(), 100, 10, 20);
+        System.out.println("Lista npc w tej lokacji: "+player.getListNPC());
 
         String command = "";
 

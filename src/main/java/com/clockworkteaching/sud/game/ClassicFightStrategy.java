@@ -7,10 +7,6 @@ import java.util.Random;
 
 public class ClassicFightStrategy implements FightStrategy {
 
-    public ClassicFightStrategy() {
-
-    }
-
     @Override
     public void fight(Player player, NPC targetNPC) {
         int hit = 0;
