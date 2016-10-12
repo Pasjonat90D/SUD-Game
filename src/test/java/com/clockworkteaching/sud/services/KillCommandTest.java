@@ -16,7 +16,6 @@ public class KillCommandTest {
     NPC ork;
 
     @Before
-
     public void initTest() {
         mainLocation = new Location("Short", "Long");
         ork = new NPC("ork");

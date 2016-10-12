@@ -31,6 +31,9 @@ public class CommandParser {
             case "kill":
                 command = new KillCommand(splitted[1], player);
                 break;
+            case "pokaz":
+                command = new LookCommand(player);
+                break;
             default:
                 System.out.println("Nieznana komenda.");
                 break;
